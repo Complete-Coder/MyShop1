@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyShop.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -8,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace MyShop.Core.Model
 {
-    public class Product
+    public class Product : BaseEntity
     {
-        public string Id { get; set; }
+        
         [StringLength(20)]
         [DisplayName("Product Name")]
         public string Name { get; set; }
@@ -21,9 +22,6 @@ namespace MyShop.Core.Model
         public string Category { get; set; }
         public string Images { get; set; }
 
-        public Product()
-        {
-            this.Id = Guid.NewGuid().ToString();
-        }
+        
     }
 }
