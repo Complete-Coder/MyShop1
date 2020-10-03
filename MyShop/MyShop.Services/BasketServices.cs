@@ -11,7 +11,7 @@ using System.Web;
 
 namespace MyShop.Services
 {
-   public class BasketServices:IBasketService
+   public class BasketServices:IBasketService 
     {
         IRepository<Product> productContext;
         IRepository<Basket> basketContext;
@@ -97,7 +97,7 @@ namespace MyShop.Services
                 basketContext.Commit();
             }
         }
-        public List<BasketItemViewModel> GetBasketItem(HttpContextBase httpContext)
+        public List<BasketItemViewModel> GetBasketItems(HttpContextBase httpContext)
         {
             Basket basket = GetBasket(httpContext, false);
             if (basket != null)

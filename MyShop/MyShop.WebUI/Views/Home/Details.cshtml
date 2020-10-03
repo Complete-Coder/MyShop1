@@ -37,7 +37,7 @@
                 &#x20B9; @Html.DisplayFor(model => model.Price)
             </dd>
             <dt></dt>
-            <dd><a href="#" class="btn btn-default">Add To Basket</a>
+            <dd><a href="@Url.Action("AddToBasket","Basket",new { Id=Model.Id})" class="btn btn-default">Add To Basket</a>
             </dd>
             <dd>@Html.ActionLink("Back to List", "Index")</dd> 
         </dl>
